@@ -613,3 +613,74 @@ margin-bottom:10px;
 }
 
 }
+/*==================================================
+        EXTRA RESPONSIVE IMPROVEMENTS
+==================================================*/
+
+@media (max-width: 768px) {
+
+    .about-container {
+        padding: 0 20px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        line-height: 1.4;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stat-box {
+        width: 100%;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    .about-highlights div {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .about-container {
+        padding: 0 15px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-content > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .section-tag {
+        font-size: 11px;
+        padding: 6px 14px;
+    }
+
+    .stat-box h3 {
+        font-size: 22px;
+    }
+
+    .stat-box p {
+        font-size: 12px;
+    }
+
+    .about-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+}
