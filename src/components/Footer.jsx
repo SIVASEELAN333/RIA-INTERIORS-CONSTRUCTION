@@ -24,7 +24,7 @@ function Footer() {
     const locationLink =
         "https://maps.app.goo.gl/5vU4ox44uXycasHt7?g_st=aw";
 
-    const email = "riaassociatescontact@gmail.com";
+    const email = "riainteriorscontraction@gmail.com";
 
     return (
 
