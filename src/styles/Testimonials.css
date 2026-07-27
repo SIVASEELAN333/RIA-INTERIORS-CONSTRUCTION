@@ -105,3 +105,85 @@ grid-template-columns:1fr;
 }
 
 }
+/* ==========================================
+   EXTRA MOBILE RESPONSIVE IMPROVEMENTS
+========================================== */
+
+@media (max-width: 992px) {
+
+    .why {
+        padding: 80px 0;
+    }
+
+    .why-grid {
+        gap: 25px;
+        margin-top: 45px;
+    }
+
+    .why-card {
+        padding: 30px 25px;
+    }
+
+    .why-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .why {
+        padding: 60px 0;
+    }
+
+    .why-grid {
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .why-card {
+        padding: 25px 20px;
+    }
+
+    .why-card h3 {
+        font-size: 20px;
+    }
+
+    .why-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .why {
+        padding: 50px 0;
+    }
+
+    .why-card {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .why-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .why-card h3 {
+        font-size: 18px;
+    }
+
+    .why-card p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+}
