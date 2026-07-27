@@ -93,3 +93,49 @@ height:250px;
 }
 
 }
+/* ==========================================
+   EXTRA MOBILE RESPONSIVE IMPROVEMENTS
+========================================== */
+
+@media (max-width: 768px) {
+
+    .gallery {
+        padding: 70px 0;
+    }
+
+    .gallery-grid {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .gallery-card {
+        border-radius: 12px;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: 240px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .gallery {
+        padding: 50px 0;
+    }
+
+    .gallery-grid {
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .gallery-card img {
+        height: 220px;
+    }
+
+    .gallery-overlay svg {
+        font-size: 32px;
+    }
+
+}
