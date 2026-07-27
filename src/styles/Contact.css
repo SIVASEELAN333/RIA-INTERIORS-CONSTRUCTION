@@ -535,3 +535,71 @@
     }
 
 }
+/* ==========================================
+   EXTRA MOBILE RESPONSIVE IMPROVEMENTS
+========================================== */
+
+@media (max-width: 768px) {
+
+    .contact .container {
+        width: 95%;
+    }
+
+    .contact-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-content {
+        width: 100%;
+    }
+
+    .contact-content h3 {
+        word-break: break-word;
+    }
+
+    .contact-content p {
+        word-break: break-word;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .contact {
+        padding: 50px 0;
+    }
+
+    .contact .container {
+        width: 92%;
+    }
+
+    .contact-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .contact-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .contact-icon svg {
+        font-size: 22px;
+    }
+
+    .contact-content h3 {
+        font-size: 18px;
+    }
+
+    .contact-content p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .contact-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+}
