@@ -30,14 +30,14 @@
     position:absolute;
     left:8%;
     max-width:620px;
-    color:white;
+    color:#D9D9D9;
     z-index:2;
 }
 
 .hero-tag{
     display:inline-block;
-    background:#c49a3a;
-    color:white;
+    background:#C61F2B;
+    color:#D9D9D9;
     padding:8px 18px;
     border-radius:4px;
     font-size:14px;
@@ -53,7 +53,7 @@
 }
 
 .hero-content h3{
-    color:#c49a3a;
+    color:#C61F2B;
     margin-bottom:20px;
     font-size:22px;
 }
@@ -61,7 +61,7 @@
 .hero-content p{
     font-size:17px;
     line-height:1.8;
-    color:#f1f1f1;
+    color:#D9D9D9;
     margin-bottom:35px;
 }
 
@@ -76,8 +76,8 @@
 }
 
 .primary-btn{
-    background:#c49a3a;
-    color:white;
+    background:#C61F2B;
+    color:#F7F7F7;
     border:none;
     padding:14px 30px;
     cursor:pointer;
@@ -87,7 +87,7 @@
 }
 
 .primary-btn:hover{
-    background:#a87f27;
+    background:#C61F2B;
 }
 
 .secondary-btn{
@@ -120,7 +120,7 @@
 }
 
 .stat-card h2{
-    color:#c49a3a;
+    color:#C61F2B;
     font-size:30px;
     margin-bottom:6px;
 }
@@ -274,5 +274,343 @@
     .stat-card p {
         font-size: 13px;
     }
+
+}
+/* ==================================================
+        PREMIUM HERO ANIMATIONS
+==================================================*/
+
+/* Smooth Transition */
+
+.hero,
+.hero *,
+.primary-btn,
+.secondary-btn,
+.stat-card{
+    transition:all .4s ease;
+}
+
+/* Hero Background Zoom */
+
+.hero-image{
+    animation:heroZoom 18s ease-in-out infinite alternate;
+    transform-origin:center;
+}
+
+/* Overlay Animation */
+
+.hero-overlay{
+    animation:overlayFade 2s ease;
+}
+
+/* Hero Content Animation */
+
+.hero-content{
+    animation:contentFade 1s ease;
+}
+
+/* Tag Animation */
+
+.hero-tag{
+    animation:slideDown .9s ease;
+}
+
+/* Heading Animation */
+
+.hero-content h1{
+    animation:slideLeft 1s ease;
+}
+
+/* Subtitle Animation */
+
+.hero-content h3{
+    animation:slideRight 1.2s ease;
+}
+
+/* Paragraph Animation */
+
+.hero-content p{
+    animation:fadeUp 1.4s ease;
+}
+
+/* Buttons Animation */
+
+.hero-buttons{
+    animation:fadeUp 1.6s ease;
+}
+
+/* Stats Animation */
+
+.hero-stats{
+    animation:fadeUp 1.8s ease;
+}
+
+/* ==================================================
+                BUTTON EFFECTS
+==================================================*/
+
+.primary-btn{
+
+    box-shadow:0 10px 25px rgba(198,31,43,.25);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(198,31,43,.45);
+
+}
+
+.secondary-btn{
+
+    box-shadow:0 10px 20px rgba(0,0,0,.18);
+
+}
+
+.secondary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 30px rgba(0,0,0,.28);
+
+}
+
+/* ==================================================
+                STAT CARDS
+==================================================*/
+
+.stat-card{
+
+    transition:all .4s ease;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card h2{
+
+    transition:.4s;
+
+}
+
+.stat-card:hover h2{
+
+    transform:scale(1.08);
+
+}
+
+/* ==================================================
+            HERO IMAGE HOVER
+==================================================*/
+
+.hero:hover .hero-image{
+
+    transform:scale(1.05);
+
+}
+
+/* ==================================================
+        HERO CONTENT HOVER
+==================================================*/
+
+.hero-content{
+
+    transition:transform .4s ease;
+
+}
+
+.hero:hover .hero-content{
+
+    transform:translateY(-5px);
+
+}
+
+/* ==================================================
+        SHADOWS
+==================================================*/
+
+.hero-content h1{
+
+    text-shadow:0 5px 18px rgba(0,0,0,.45);
+
+}
+
+.hero-content h3{
+
+    text-shadow:0 2px 8px rgba(0,0,0,.25);
+
+}
+
+.hero-content p{
+
+    text-shadow:0 2px 6px rgba(0,0,0,.20);
+
+}
+
+/* ==================================================
+        KEYFRAMES
+==================================================*/
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+@keyframes overlayFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes contentFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==================================================
+        MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+.hero:hover .hero-content{
+
+    transform:none;
+
+}
+
+.hero:hover .hero-image{
+
+    transform:scale(1.02);
+
+}
+
+}
+
+/* ==================================================
+        REDUCE MOTION
+==================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+}
 
 }
