@@ -3,11 +3,17 @@
 ========================= */
 
 .hero{
+
     position:relative;
+
     height:100vh;
-    display:flex;
-    align-items:center;
+
+    min-height:100vh;
+
+    padding:0;
+
     overflow:hidden;
+
 }
 
 .hero-image{
@@ -22,21 +28,79 @@
     background:rgba(0,0,0,0.55);
 }
 
+/* Premium Hero Heading */
+
+.white-text{
+
+    color:#ffffff;
+
+    display:block;
+
+}
+
+.gold-text{
+
+    display:block;
+
+    background:linear-gradient(
+        180deg,
+        #FFD978 0%,
+        #F5C96A 30%,
+        #E7B651 55%,
+        #D79B2D 80%,
+        #C98514 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+    text-shadow:
+        0 2px 8px rgba(255,210,120,.25),
+        0 4px 20px rgba(201,133,20,.20);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .white-text,
+    .gold-text{
+
+        display:block;
+
+    }
+
+}
+
 /* =========================
    CONTENT
 ========================= */
 
 .hero-content{
+
     position:absolute;
-    left:8%;
-    max-width:620px;
-    color:#D9D9D9;
+
+    top:50%;
+
+    left:20px;
+
+    right:20px;
+
+    transform:translateY(-50%);
+
+    text-align:center;
+
+    max-width:100%;
+
     z-index:2;
+
 }
 
 .hero-tag{
     display:inline-block;
-    background:#C61F2B;
+    background:#8B1E2D;
     color:#D9D9D9;
     padding:8px 18px;
     border-radius:4px;
@@ -53,7 +117,7 @@
 }
 
 .hero-content h3{
-    color:#C61F2B;
+    color:#f9f7f8;
     margin-bottom:20px;
     font-size:22px;
 }
@@ -62,7 +126,7 @@
     font-size:17px;
     line-height:1.8;
     color:#D9D9D9;
-    margin-bottom:35px;
+    margin-bottom:20px;
 }
 
 /* =========================
@@ -71,12 +135,15 @@
 
 .hero-buttons{
     display:flex;
+    justify-content:center;
+    align-items:center;
     gap:15px;
-    margin-bottom:40px;
+    margin:0 auto 25px;
+    flex-wrap:wrap;
 }
 
 .primary-btn{
-    background:#C61F2B;
+    background:#8B1E2D;
     color:#F7F7F7;
     border:none;
     padding:14px 30px;
@@ -87,7 +154,7 @@
 }
 
 .primary-btn:hover{
-    background:#C61F2B;
+    background:#8B1E2D;
 }
 
 .secondary-btn{
@@ -111,18 +178,57 @@
 
 .hero-stats{
     display:flex;
-    gap:25px;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
     flex-wrap:wrap;
+    width:100%;
+    margin:0 auto;
 }
 
 .stat-card{
-    text-align:left;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    min-width:130px;
 }
 
 .stat-card h2{
-    color:#C61F2B;
+
     font-size:30px;
+
     margin-bottom:6px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        180deg,
+        #FFE7A5 0%,
+        #FFD978 20%,
+        #F5C96A 45%,
+        #E7B651 70%,
+        #D79B2D 90%,
+        #C98514 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+    text-shadow:
+        0 2px 8px rgba(255,217,120,.25),
+        0 5px 18px rgba(201,133,20,.20);
+
+}
+
+.stat-card:hover h2{
+
+    filter:brightness(1.15);
+
+    transform:scale(1.06);
+
 }
 
 .stat-card p{
@@ -166,7 +272,7 @@
 }
 
 .hero-stats{
-    gap:20px;
+    gap:12px;
 }
 
 }
@@ -221,10 +327,11 @@
         line-height: 1.7;
     }
 
-    .hero-buttons {
-        width: 100%;
-        align-items: center;
-    }
+    .hero-buttons{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
 
     .primary-btn,
     .secondary-btn {
@@ -232,10 +339,14 @@
         max-width: 300px;
     }
 
-    .hero-stats {
-        justify-content: center;
-        gap: 20px;
-    }
+    .hero-stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    justify-items:center;
+    align-items:center;
+    gap:18px;
+    margin-top:25px;
+}
 
     .stat-card {
         text-align: center;
@@ -245,10 +356,15 @@
 
 @media (max-width: 480px) {
 
-    .hero {
-        min-height: 90vh;
-        padding: 60px 0;
-    }
+    .hero{
+
+    height:100vh;
+
+    min-height:100vh;
+
+    padding:0;
+
+}
 
     .hero-tag {
         font-size: 12px;
@@ -276,114 +392,106 @@
     }
 
 }
-/* ==================================================
-        PREMIUM HERO ANIMATIONS
+/*==================================================
+        CONTINUOUS PREMIUM HERO ANIMATIONS
 ==================================================*/
 
-/* Smooth Transition */
+/* Smooth transitions */
 
-.hero,
 .hero *,
 .primary-btn,
 .secondary-btn,
 .stat-card{
-    transition:all .4s ease;
+    transition:all .35s ease;
 }
 
-/* Hero Background Zoom */
+/* Hero background slow cinematic zoom */
 
 .hero-image{
-    animation:heroZoom 18s ease-in-out infinite alternate;
-    transform-origin:center;
+    animation:heroZoom 20s ease-in-out infinite alternate;
 }
 
-/* Overlay Animation */
+/* Overlay breathing */
 
 .hero-overlay{
-    animation:overlayFade 2s ease;
+    animation:overlayBreath 8s ease-in-out infinite;
 }
 
-/* Hero Content Animation */
-
-.hero-content{
-    animation:contentFade 1s ease;
-}
-
-/* Tag Animation */
+/* Hero Tag */
 
 .hero-tag{
-    animation:slideDown .9s ease;
+    animation:tagFloat 4s ease-in-out infinite;
 }
 
-/* Heading Animation */
+/* Heading */
 
 .hero-content h1{
-    animation:slideLeft 1s ease;
+    animation:titleFloat 6s ease-in-out infinite;
 }
 
-/* Subtitle Animation */
+/* Subtitle */
 
 .hero-content h3{
-    animation:slideRight 1.2s ease;
+    animation:subtitleGlow 4s ease-in-out infinite;
 }
 
-/* Paragraph Animation */
+/* Paragraph */
 
 .hero-content p{
-    animation:fadeUp 1.4s ease;
+    animation:textFloat 5s ease-in-out infinite;
 }
 
-/* Buttons Animation */
-
-.hero-buttons{
-    animation:fadeUp 1.6s ease;
-}
-
-/* Stats Animation */
-
-.hero-stats{
-    animation:fadeUp 1.8s ease;
-}
-
-/* ==================================================
-                BUTTON EFFECTS
-==================================================*/
+/* Buttons */
 
 .primary-btn{
 
-    box-shadow:0 10px 25px rgba(198,31,43,.25);
+    animation:buttonPulse 3.5s ease-in-out infinite;
 
-}
-
-.primary-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 18px 35px rgba(198,31,43,.45);
+    box-shadow:0 12px 28px rgba(198,31,43,.25);
 
 }
 
 .secondary-btn{
 
-    box-shadow:0 10px 20px rgba(0,0,0,.18);
+    animation:buttonFloat 4.5s ease-in-out infinite;
+
+}
+
+/* Stats */
+
+.stat-card{
+
+    animation:statFloat 4.5s ease-in-out infinite;
+
+}
+
+.stat-card:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.stat-card:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+/*==================================================
+            HOVER EFFECTS
+==================================================*/
+
+.primary-btn:hover{
+
+    transform:translateY(-5px) scale(1.04);
+
+    box-shadow:0 20px 40px rgba(198,31,43,.35);
 
 }
 
 .secondary-btn:hover{
 
-    transform:translateY(-4px);
-
-    box-shadow:0 18px 30px rgba(0,0,0,.28);
-
-}
-
-/* ==================================================
-                STAT CARDS
-==================================================*/
-
-.stat-card{
-
-    transition:all .4s ease;
+    transform:translateY(-5px);
 
 }
 
@@ -393,79 +501,25 @@
 
 }
 
-.stat-card h2{
+.hero:hover .hero-overlay{
 
-    transition:.4s;
-
-}
-
-.stat-card:hover h2{
-
-    transform:scale(1.08);
+    background:rgba(0,0,0,.48);
 
 }
 
-/* ==================================================
-            HERO IMAGE HOVER
-==================================================*/
-
-.hero:hover .hero-image{
-
-    transform:scale(1.05);
-
-}
-
-/* ==================================================
-        HERO CONTENT HOVER
-==================================================*/
-
-.hero-content{
-
-    transition:transform .4s ease;
-
-}
-
-.hero:hover .hero-content{
-
-    transform:translateY(-5px);
-
-}
-
-/* ==================================================
-        SHADOWS
-==================================================*/
-
-.hero-content h1{
-
-    text-shadow:0 5px 18px rgba(0,0,0,.45);
-
-}
-
-.hero-content h3{
-
-    text-shadow:0 2px 8px rgba(0,0,0,.25);
-
-}
-
-.hero-content p{
-
-    text-shadow:0 2px 6px rgba(0,0,0,.20);
-
-}
-
-/* ==================================================
-        KEYFRAMES
+/*==================================================
+            KEYFRAMES
 ==================================================*/
 
 @keyframes heroZoom{
 
-    from{
+    0%{
 
         transform:scale(1);
 
     }
 
-    to{
+    100%{
 
         transform:scale(1.08);
 
@@ -473,133 +527,204 @@
 
 }
 
-@keyframes overlayFade{
+@keyframes overlayBreath{
 
-    from{
+    0%{
 
-        opacity:0;
+        opacity:.55;
 
     }
 
-    to{
+    50%{
 
-        opacity:1;
+        opacity:.48;
+
+    }
+
+    100%{
+
+        opacity:.55;
 
     }
 
 }
 
-@keyframes contentFade{
+@keyframes tagFloat{
 
-    from{
+    0%{
 
-        opacity:0;
-        transform:translateY(40px);
+        transform:translateY(0);
 
     }
 
-    to{
+    50%{
 
-        opacity:1;
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
         transform:translateY(0);
 
     }
 
 }
 
-@keyframes slideLeft{
+@keyframes titleFloat{
 
-    from{
+    0%{
 
-        opacity:0;
-        transform:translateX(-50px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateX(0);
+        transform:translateY(0);
 
     }
 
-}
+    50%{
 
-@keyframes slideRight{
-
-    from{
-
-        opacity:0;
-        transform:translateX(50px);
+        transform:translateY(-6px);
 
     }
 
-    to{
+    100%{
 
-        opacity:1;
-        transform:translateX(0);
-
-    }
-
-}
-
-@keyframes slideDown{
-
-    from{
-
-        opacity:0;
-        transform:translateY(-30px);
-
-    }
-
-    to{
-
-        opacity:1;
         transform:translateY(0);
 
     }
 
 }
 
-@keyframes fadeUp{
+@keyframes subtitleGlow{
 
-    from{
+    0%{
 
-        opacity:0;
-        transform:translateY(35px);
+        text-shadow:0 0 0 rgba(198,31,43,.3);
 
     }
 
-    to{
+    50%{
 
-        opacity:1;
+        text-shadow:0 0 18px rgba(198,31,43,.45);
+
+    }
+
+    100%{
+
+        text-shadow:0 0 0 rgba(198,31,43,.3);
+
+    }
+
+}
+
+@keyframes textFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-3px);
+
+    }
+
+    100%{
+
         transform:translateY(0);
 
     }
 
 }
 
-/* ==================================================
-        MOBILE
+@keyframes buttonPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes buttonFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-4px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes statFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+            MOBILE
 ==================================================*/
 
 @media(max-width:768px){
 
-.hero:hover .hero-content{
+.hero-image{
 
-    transform:none;
-
-}
-
-.hero:hover .hero-image{
-
-    transform:scale(1.02);
+    animation:heroZoom 24s ease-in-out infinite alternate;
 
 }
 
+.primary-btn,
+.secondary-btn{
+
+    animation:none;
+
 }
 
-/* ==================================================
+}
+
+/*==================================================
         REDUCE MOTION
 ==================================================*/
 
